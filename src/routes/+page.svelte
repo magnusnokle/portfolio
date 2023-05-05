@@ -1,9 +1,10 @@
 
 <body>
 
-<div class="font">
+<div class="">
     <img alt="s" src={bilde}>
 </div>
+
 <div>
     <div class="  mt-48 flex flex-col items-center ">
             <div class="flex flex-rows w-11/12 place-content-evenly ">
@@ -18,12 +19,12 @@
                             But I also use react, tailwind, sanity, python, 
                             html And css. read more about me and my projects here.
                         </p>
-                        <a href="#linker" on:click={smooth} class="border-4 border-purple-400 rounded-3xl flex flex-row items-center text-center"><p class="border-2">Who am i </p><img src={pil} id="pil"></a>
+                        <a href="#linker" on:click={smooth} class="border-4 border-purple-400 rounded-3xl relative right-48">Who am i </a>
                     </div>
                     <div class=" max h-64 purple-500 flex flex-col font-light "  >
                             <a href="https://github.com/magnusnokle/it_eksamen" class="border-4 border-purple-400">Github</a>
-                            <a href="/port" class="border-4 border-purple-400">CV/Søknad</a>
-                            <a href="" class="border-4 border-purple-400">Kontakt meg</a>
+                            <a on:click={windowAlert} href="" class="border-4 border-purple-400">CV/Søknad</a>
+                            <a on:click={windowAlert} href="" class="border-4 border-purple-400">Kontakt meg</a>
                     </div>
             </div>
             <div class="w-max flex flex-row ml-auto mr-auto mt-20" id="linker">
@@ -33,7 +34,7 @@
             </div>
                 <div class="flex flex-row">made with <div class="text-purple-600 ml-1 mr-1">svelte</div>and<div class="text-blue-600 ml-1">tailwind</div></div>   
     </div>
-    <div class="h-max w-9/12 ml-auto mr-auto flex items-center flex-row-reverse mt-48 bg-gray-900 ">
+    <div class="h-max w-9/12 ml-auto mr-auto flex items-center flex-row-reverse mt-36 bg-gray-900 ">
         <div class=" w-6/12 flex items-start flex-col mr-20 " >  
 
             <img src={overksift3} alt="" id="overskrift3"/>
@@ -49,21 +50,20 @@
                 also have been wprking on projects using javascript and basic terminal hacking.
             </div>
         </div>
-        <img src="" alt="" id="profil-bilde">
+        <img src={magnus} alt="" id="profil-bilde">
     </div>
 
+    <div class=" mt-10 text-center" style="width: 100%; height:100px;">
+        <p class="ml-auto mr-auto">(this website is still a work in process)</p>
+
+    </div>
     </div>
 
  
 </body>
 
 <style>
-    #pil{
-        width: 30px;
-        border: 1px red solid;
-        rotate: 180deg;
-    }
-
+    
     #overskrift3{
         margin-right:400px;
     }
@@ -71,7 +71,6 @@
     #profil-bilde{
         width: 30%;
         height: 400px;
-        border: 1px red solid;
     }
     h1{
         
@@ -136,9 +135,14 @@
     import spotify from '../spotify.png'
     import overskrift from '../Screenshot 2023-04-27 at 19.12.54.png'
     import discord from '../discord.png'
+    import magnus from '../magnus.png'
 
     function smooth(){
                         document.documentElement.style.scrollBehavior = "smooth"
 
       }
+
+    function windowAlert(){
+            alert("denne funksjonen er ikke lagt inn enda :(");
+    }
 </script>
